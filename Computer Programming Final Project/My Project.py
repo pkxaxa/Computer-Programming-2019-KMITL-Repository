@@ -31,17 +31,7 @@ def check(lat, lon , baro, callsign):
         for y in range(len(lat)-(x+1)):
             # 1 meters = 3.28084 ft.
             if (horizontal_distance(lat[x], lat[x+y+1], lon[x], lon[x+y+1]) < (3 * 1.852) and abs(baro[x] -baro[x+y+1])*3.28084 < 1000):
-                # print("The confliction info at time: " + str(t[z]))
-                # print("The Callsign of the 1st plane is " + str(callsign[x]))
-                # print("lat1 = " + str(lat[x]))
-                # print("lon1 = " + str(lon[x]))
-                # print("baro1 = " + str(baro[x]*3.28084))
-                # print("The Callsign of the 2nd plane is " + str(callsign[x+y+1]))
-                # print("lat2 = " + str(lat[x+y+1]))
-                # print("lon2 = " + str(lon[x+y+1]))
-                # print("baro2 = " + str(baro[x+y+1]*3.28084))
-                #confl.append([callsign[x], callsign[x + y +1]])
-                confl.append([callsign[x], callsign[x + y + 1]])
+                confl.append([callsign[x], callsign[x + y +1]])
                 confl_t.append(t[z])
 
 
@@ -65,7 +55,6 @@ for z in tqdm(range(len(t)), desc="Loading All Conflict Arranging by Time"):
     callsign = focus_row['callsign'].tolist()
 
     check(lat, lon, baro, callsign)
-    #check(lat, lon, baro, callsign)
 
 ans = unique(confl)
 
@@ -80,5 +69,4 @@ for u in range(len(ans)):
             break
 
 print('\nThere are a toatl of ' + str(len(ans)) + ' Conflicts')
-#print(confl)
-#print(confl_t)
+
