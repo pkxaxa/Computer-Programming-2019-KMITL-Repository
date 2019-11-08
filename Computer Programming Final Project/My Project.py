@@ -64,9 +64,9 @@ for u in range(len(ans)):
     print(str(ans[u][0]) + '\tand\t' + str(ans[u][1]))
     for r in range(len(confl)):
         if(confl[r] == ans[u]):
-            print('At time:' + str(confl_t[r]))
+            print('At time: ' + str(confl_t[r]))
             print('---------------------------------------------------- \n')
             break
 
-print('\nThere are a toatl of ' + str(len(ans)) + ' Conflicts')
+print('\nThere are a total of ' + str(len(ans)) + ' conflicts')
 
