@@ -1,0 +1,9 @@
+Describe Data : https://opensky-network.org/data/impala
+
+
+Aircraft that operate in the Terminal Maneuvering Area(TMA) are required to be separate in vertical at least 1,000 feet
+and separate in horizontal at least 3 nautical miles(NM).
+
+Write python program to detect aircraft conflict and upload details about information that you get into your website.
+
+
